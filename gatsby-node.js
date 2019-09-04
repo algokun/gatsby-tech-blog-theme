@@ -50,6 +50,7 @@ exports.onCreateNode = ({ node, actions }, themeOptions) => {
       slug = urlResolve(basePath, node.frontmatter.title);
     }
     createNodeField({ node, name: "slug", value: slug });
+    createNodeField({ node, name: "path", value: basePath });
   }
 };
 
@@ -116,7 +117,7 @@ exports.createPages = async ({ graphql, actions }, themeOptions) => {
     component: categoryListQuery,
     contentPath: {
       path: categoryPath,
-      home: basePath,
+      home: basePath
     }
   });
 

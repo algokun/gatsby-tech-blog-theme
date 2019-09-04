@@ -1,61 +1,24 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styled from "styled-components";
-import config from "../../config";
 
 import { Layout, Article, Wrapper, SectionTitle } from "./index";
-
-const Content = styled.div`
-  grid-column: 2;
-  box-shadow: 0 4px 120px rgba(0, 0, 0, 0.1);
-  border-radius: 1rem;
-  padding: 3rem 6rem;
-  @media (max-width: ${props => props.theme.breakpoints.tablet}) {
-    padding: 3rem 2rem;
-  }
-  @media (max-width: ${props => props.theme.breakpoints.phone}) {
-    padding: 2rem 1.5rem;
-  }
-  overflow: hidden;
-`;
-
-const Hero = styled.div`
-  grid-column: 2;
-  padding: 3rem 2rem 6rem 2rem;
-  text-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-  color: ${props => props.theme.colors.grey.dark};
-
-  @media (max-width: ${props => props.theme.breakpoints.phone}) {
-    padding: 2rem 1rem 4rem 1rem;
-  }
-
-  p {
-    font-size: 1.68rem;
-    margin-top: -1rem;
-    @media (max-width: ${props => props.theme.breakpoints.tablet}) {
-      font-size: 1.45rem;
-    }
-    @media (max-width: ${props => props.theme.breakpoints.phone}) {
-      font-size: 1.25rem;
-    }
-  }
-`;
+import { Hero, PostListContent } from "./StyledComponents";
 
 const IndexPage = ({
   data: {
-    allMdx: { nodes: posts }
-  },
-  path
+    allMdx: { nodes: posts },
+    site: {
+      siteMetadata: { author }
+    }
+  }
 }) => (
   <Layout>
     <Wrapper>
       <Hero>
         <h1>Blog</h1>
-        <p>
-          Writings by {config.author}
-        </p>
+        <p>Writings by {author}</p>
       </Hero>
-      <Content>
+      <PostListContent>
         <SectionTitle>Latest stories</SectionTitle>
         {posts.map(post => (
           <Article
@@ -65,11 +28,11 @@ const IndexPage = ({
             timeToRead={post.timeToRead}
             slug={post.fields.slug}
             categories={post.frontmatter.categories}
-            path={path}
+            path={post.fields.path}
             key={post.fields.slug}
           />
         ))}
-      </Content>
+      </PostListContent>
     </Wrapper>
   </Layout>
 );

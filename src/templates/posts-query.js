@@ -9,6 +9,7 @@ export const IndexQuery = graphql`
       nodes {
         fields {
           slug
+          path
         }
         frontmatter {
           title
@@ -17,6 +18,11 @@ export const IndexQuery = graphql`
         }
         excerpt(pruneLength: 200)
         timeToRead
+      }
+    }
+    site{
+      siteMetadata{
+        author
       }
     }
   }

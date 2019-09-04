@@ -5,8 +5,8 @@ import styled from "styled-components";
 import kebabCase from "lodash/kebabCase";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 
-import { Layout, Wrapper, Header, Subline, SEO, PrevNext } from "../components";
-import config from "../../config";
+import { Layout, Wrapper, Subline, SEO, PrevNext } from "../components";
+import PostHeader from "../components/PostHeader";
 
 const Content = styled.article`
   grid-column: 2;
@@ -60,20 +60,7 @@ const Post = ({
     <Layout customSEO>
       <Wrapper>
         <SEO postPath={slug} postNode={postNode} article />
-        <Header>
-          <Link to={home}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill = "#FFF"
-            >
-              <path d="M11.67 3.87L9.9 2.1 0 12l9.9 9.9 1.77-1.77L3.54 12z" />
-              <path fill="none" d="M0 0h24v24H0z" />
-            </svg>
-          </Link>
-        </Header>
+        <PostHeader home={home} />
         <Content>
           <Title>{post.title}</Title>
           <Subline>

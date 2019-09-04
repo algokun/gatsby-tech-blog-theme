@@ -14,6 +14,34 @@ module.exports = themeOptions => {
       "gatsby-plugin-styled-components",
       "gatsby-plugin-sharp",
       {
+        resolve: `@gatsby-contrib/gatsby-plugin-elasticlunr-search`,
+        options: {
+          // Fields to index
+          fields: [
+            `title`,
+            `date`,
+            `excerpt`,
+            `slug`,
+            `timeToRead`,
+            `categories`,
+            `path`
+          ],
+          // How to resolve each field`s value for a supported node type
+          resolvers: {
+            // For any node of type MarkdownRemark, list how to resolve the fields` values
+            Mdx: {
+              title: node => node.frontmatter.title,
+              date: node => node.frontmatter.date,
+              categories: node => node.frontmatter.categories,
+              excerpt: node => node.excerpt,
+              timeToRead: node => node.timeToRead,
+              path: node => node.fields.path,
+              slug: node => node.fields.slug
+            }
+          }
+        }
+      },
+      {
         resolve: `gatsby-source-filesystem`,
         options: {
           path: options.contentPath || `content/posts`,
@@ -73,8 +101,7 @@ module.exports = themeOptions => {
           icon: config.favicon
         }
       },
-      "gatsby-plugin-offline",
-      "gatsby-plugin-netlify"
+      "gatsby-plugin-offline"
     ]
   };
 };

@@ -4,6 +4,7 @@ Typography driven, focus on the content & minimal style. Powered by MDX.
 
 [Demo Website](https://minimal-blog.lekoarts.de)
 [Starter](https://github.com/LekoArts/gatsby-starter-minimal-blog)
+
 ## About Me
 
 Hi There!
@@ -19,6 +20,7 @@ Also check out the other _gatsby-starters_ and _gatsby-themes_:
 
 ## Features
 
+- Search Powered by [Elastic Lunr](https://www.gatsbyjs.org/packages/@gatsby-contrib/gatsby-plugin-elasticlunr-search)
 - Articles in MDX ([gatsby-mdx](https://github.com/ChristopherBiscardi/gatsby-mdx))
 - Code highlighting (with [prism-react-renderer](https://github.com/FormidableLabs/prism-react-renderer)) and live preview (with [react-live](https://github.com/FormidableLabs/react-live))
 - Styled Components 💅

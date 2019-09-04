@@ -112,7 +112,9 @@ const GlobalStyle = createGlobalStyle`
   input, textarea {
     border-radius: .5rem;
     border: none;
+    color: ${props => props.theme.colors.primary};
     background: rgba(0, 0, 0, 0.05);
+    width: 100%;
     padding: .4rem 1rem;
     &:focus {
       outline: none;
