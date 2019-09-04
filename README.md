@@ -1,4 +1,4 @@
-# Gatsby Starter: Minimal Blog
+# Gatsby Tech Blog Theme: A Gatsby Theme
 
 Typography driven, focus on the content & minimal style. Powered by MDX.
 
@@ -10,19 +10,16 @@ Typography driven, focus on the content & minimal style. Powered by MDX.
 
 ## About Me
 
-I hope you like my starters and create something awesome! To see some of my work you can visit my [website](https://www.lekoarts.de) or support me on [Patreon](https://www.patreon.com/lekoarts) to get some neat rewards (4K images, project files, tutorial insights). Every pledge on Patreon helps me creating more free starters!
+Hi There!
+I'm Mohan and I hope you like my starters and create something awesome! To see some of my work you can visit my [website](https://www.lekoarts.de).
 
-Also check out the other _gatsby-starters_:
+Also check out the other _gatsby-starters_ and _gatsby-themes_:
 
-- [gatsby-starter-portfolio-emma](https://github.com/LekoArts/gatsby-starter-portfolio-emma)
-- [gatsby-starter-portfolio-emilia](https://github.com/LekoArts/gatsby-starter-portfolio-emilia)
-- [gatsby-starter-portfolio-bella](https://github.com/LekoArts/gatsby-starter-portfolio-bella)
-- [gatsby-starter-portfolio-cara](https://github.com/LekoArts/gatsby-starter-portfolio-cara)
-- [gatsby-starter-portfolio-jodie](https://github.com/LekoArts/gatsby-starter-portfolio-jodie)
-- [gatsby-starter-prismic](https://github.com/LekoArts/gatsby-starter-prismic)
-- [gatsby-starter-prismic-i18n](https://github.com/LekoArts/gatsby-starter-prismic-i18n)
-
-Check out the [Gatsby Starter Portfolio Overview](https://gatsby-starter-portfolio.netlify.com/)!
+- [gatsby_starter_unicorn](https://github.com/mohanmonu777/gatsby_starter_unicorn)
+- [gatsby_theme_unicorn](https://github.com/mohanmonu777/gatsby_theme_unicorn)
+- [gatsby-starter-krisp](https://github.com/mohanmonu777/gatsby-starter-krisp)
+- [the404blog](https://github.com/mohanmonu777/the404blog)
+- [gatsby_contentful_starter](https://github.com/mohanmonu777/gatsby_contentful_starter)
 
 ## Features
 
@@ -52,6 +49,12 @@ To copy and install this starter run this command (with "project-name" being the
 gatsby new project-name https://github.com/LekoArts/gatsby-starter-minimal-blog
 cd project-name
 npm run develop
+```
+
+### Add Theme to your site
+
+```
+npm i --save gatsby-tech-blog-theme
 ```
 
 ### Adding new features/plugins
